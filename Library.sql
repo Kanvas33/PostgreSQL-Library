@@ -1,9 +1,9 @@
 /* DB ***LIBRARY***
 ACADEMY DB */
 
------------------------------------------------------------|
-/* TABLE CONSTRUCTION WITHOUT FK						   |
------------------------------------------------------------|
+-----------------------------------------------------------
+/* TABLE CONSTRUCTION WITHOUT FK						   
+-----------------------------------------------------------
 
 - auxiliary tables */ -----------------------------------------------------------
 
@@ -39,10 +39,10 @@ create table autores (
    nome varchar(100) not null
 );
 
------------------------------------------------------------|
-/* TABLE CONSTRUCTION WITH FK,							   |
-but I will introduce FK and the relationship later         |
------------------------------------------------------------|
+-----------------------------------------------------------
+/* TABLE CONSTRUCTION WITH FK,							   
+but I will introduce FK and the relationship later         
+-----------------------------------------------------------
 
 - main tables */ -----------------------------------------------------------
 
@@ -101,20 +101,20 @@ create table locacoes (
 );
 
 /*
-----------------------------------------------------------------------|
-                                                                      |
-                    CREATE RELATIONSHIPS AND FK (foreign key)         |
-                    USING ALTER TABLE                                 |
-                                                                      |
-                    CREATING CONSTRAINTS WHEN CREATING RELATIONSHIPS: |
-                                                                      |
-                    - ON DELETE CASCADE                               |
-                    - ON DELETE SET NULL                              |
-                    - ON DELETE SET DEFAULT                           |
-                    - ON DELETE RESTRICT                              |
-                    - ON DELETE NO ACTION                             |
-                                                                      |    
-----------------------------------------------------------------------|
+----------------------------------------------------------------------
+                                                                      
+                    CREATE RELATIONSHIPS AND FK (foreign key)         
+                    USING ALTER TABLE                                 
+                                                                      
+                    CREATING CONSTRAINTS WHEN CREATING RELATIONSHIPS: 
+                                                                      
+                    - ON DELETE CASCADE                               
+                    - ON DELETE SET NULL                              
+                    - ON DELETE SET DEFAULT                           
+                    - ON DELETE RESTRICT                              
+                    - ON DELETE NO ACTION                             
+                                                                        
+----------------------------------------------------------------------
 */
 
 /* adding FK ATTRIBUTE ---------------------------------------------------
@@ -232,12 +232,12 @@ ON DELETE NO ACTION; -- WHEN DELETING A RECORD FROM THE "socios" TABLE
 -- DEFAULT OPTION
 
 /*
---------------------------------------------------------------------|
-                                                                    |
-                INSERT DATA INTO TABLE RECORDS                      |
-                                                                    |
-                                                                    |
---------------------------------------------------------------------|
+--------------------------------------------------------------------
+                                                                    
+                INSERT DATA INTO TABLE RECORDS                      
+                                                                    
+                                                                    
+--------------------------------------------------------------------
 */
 
 /* table "editoras" */
@@ -404,10 +404,10 @@ INSERT INTO livros_autores (cod_livro,cod_autor) VALUES (10,13);
 select * from livros_autores;
 
 /*
------------------------------------------------------------|
-                    /* OPERATORS */						   |
-														   |
------------------------------------------------------------|
+-----------------------------------------------------------
+                    /* OPERATORS */						   
+														   
+-----------------------------------------------------------
 */ 
 
 
@@ -458,14 +458,14 @@ select taxa, taxa > (10+5) as isboolean_ from locacoes
 where taxa > (10+5);
 
 /*
------------------------------------------------------------|
-                    /* OTHER OPERATORS:					   |
-														   |
-                    - LIKE/ILIKE						   |
-                    - IN								   |
-                    - BETWEEN							   |
-                    - IS NULL */						   |
------------------------------------------------------------|
+-----------------------------------------------------------
+                    /* OTHER OPERATORS:					   
+														   
+                    - LIKE/ILIKE						   
+                    - IN								   
+                    - BETWEEN							   
+                    - IS NULL */						   
+-----------------------------------------------------------
 */
 
 /* LIKE -----------------------------------------------------------
@@ -540,13 +540,13 @@ where taxa is null;
 
 
 /*	
-------------------------------------------------------------|
-															|
-						LOGICAL OPERATORS: 					|
-															|
-						- OR, IN, AND, NOT, BETWEEN			|
-															|
-------------------------------------------------------------|
+------------------------------------------------------------
+															
+			LOGICAL OPERATORS: 					
+															
+			- OR, IN, AND, NOT, BETWEEN			
+															
+------------------------------------------------------------
 */
 
 
@@ -572,7 +572,7 @@ where codigo <> 1;
 select * from livros;
 
 
---BETWEEN, AND------------------------------------------------------------
+--BETWEEN, AND-----------------------------------------------------
 /* codigo between 1 and 5 */
 select codigo, titulo, volume, nro_edicao from livros
 where codigo between 1 and 5;
@@ -593,11 +593,11 @@ where data_devolucao is not null;
 
 
 /*
-------------------------------------------------------------|
-															|
-					OPERATOR PRECEDENCE					    |
-															|
-------------------------------------------------------------|
+------------------------------------------------------------
+															
+		OPERATOR PRECEDENCE					    
+															
+------------------------------------------------------------
 */
 
 
@@ -665,13 +665,13 @@ where (data_publicacao < '01/01/2010' and volume= 1) and cod_editora in(7,8);
 
 
 /*
-------------------------------------------------------------|
-															|
-							ALIAS:							|
-															|
-							- AS							|
-															|
-------------------------------------------------------------|
+------------------------------------------------------------
+															
+				ALIAS:							
+															
+				- AS							
+															
+------------------------------------------------------------
 */
 
 
@@ -697,14 +697,14 @@ select LA.cod_livro from livros_autores as LA;
 
 
 /*
---------------------------------------------------------------------|
-																	|
-					DISTINCT: 										|
-																	|
-					Query without Duplicate Values					|
-																	|
-																	|
---------------------------------------------------------------------|		
+--------------------------------------------------------------------
+																	
+			DISTINCT: 										
+																	
+		Query without Duplicate Values					
+														
+																	
+--------------------------------------------------------------------		
 */
 
 
@@ -724,13 +724,13 @@ select distinct data_emprestimo from locacoes;
 
 
 /*
-------------------------------------------------------------|
-															|
-					ORDER BY:								|
-															|
-					-ASC, DESC								|
-															|
-------------------------------------------------------------|					
+------------------------------------------------------------
+															
+			ORDER BY:								
+															
+			-ASC, DESC								
+															
+------------------------------------------------------------					
 */
 
 
@@ -756,13 +756,13 @@ order by cod_autor, cod_livro;
 
 
 /*
-------------------------------------------------------------|
-															|
-					AGGREGATION FUNCTIONS:					|
-															|
-					- MAX, MIN, AVG, SUM					|
-															|
-------------------------------------------------------------|					
+------------------------------------------------------------
+															
+			AGGREGATION FUNCTIONS:					
+															
+			- MAX, MIN, AVG, SUM					
+															
+------------------------------------------------------------					
 */					
 					
 /*Aggregates a set of values into a single result */
@@ -796,13 +796,13 @@ where data_prevista = data_devolucao;
 
 
 /*
-------------------------------------------------------------|
-                    COUNTING RECORDS:                   	|
-                                                       		|
-                    - COUNT                               	|
-                    - COUNT + DISTINCT                    	|
-                    - COUNT + FILTER                     	|        
-------------------------------------------------------------|                    
+------------------------------------------------------------
+                    COUNTING RECORDS:                   	
+                                                       		
+                    - COUNT                               	
+                    - COUNT + DISTINCT                    
+                    - COUNT + FILTER                     	       
+------------------------------------------------------------                   
 */
 
                     
@@ -860,13 +860,13 @@ from livros;
 
 
 /*
-------------------------------------------------------------|
-                    GROUPING VALUES:                        |
-                                                        	|
-                    - GROUP BY                              |
-                    - ROLLUP                                |
-                    - HAVING                                |                               
-------------------------------------------------------------|
+------------------------------------------------------------
+                    GROUPING VALUES:                        
+                                                        	
+                    - GROUP BY                              
+                    - ROLLUP                                
+                    - HAVING                                                         
+------------------------------------------------------------
 */
 
             
@@ -919,12 +919,12 @@ order by cod_socio;
 
 
 /*
-------------------------------------------------------------|
-                    LIMITING RECORDS:                   	|
-                                                       		|
-                    - LIMIT                               	|
-                    - OFFSET                            	|
-------------------------------------------------------------|
+------------------------------------------------------------
+                    LIMITING RECORDS:                   	
+                                                       		
+                    - LIMIT                               	
+                    - OFFSET                            	
+------------------------------------------------------------
 */
 
 
@@ -946,17 +946,17 @@ limit 3 offset 6;
 
 
 /*
-------------------------------------------------------------|
-                                                            |
-                        CASE WHEN							|
-															|
-	-"CASE WHEN" statement is a powerful and flexible 		|
-	conditional expression that allows you to perform 		|
-	conditional logic within a SQL query. It is 			|
-	typically used to return different values or 			|
-	perform different actions based on specific conditions. |
-                                                            |
-------------------------------------------------------------|
+------------------------------------------------------------
+                                                            
+                        CASE WHEN							
+															
+-"CASE WHEN" statement is a powerful and flexible 		
+conditional expression that allows you to perform 		
+conditional logic within a SQL query. It is 			
+typically used to return different values or 			
+perform different actions based on specific conditions. 
+                                                            
+------------------------------------------------------------
 */
 
 
@@ -1124,14 +1124,14 @@ select * from livros;
 
 
 /*
-------------------------------------------------------------|
-                    MAIN FUNCTIONS:                       	|
-                                                        	|
-                    - SUBSTRING                             |
-                    - LENGTH                                |
-                    - TRIM                                  |
-                    - REPLACE                               |
-------------------------------------------------------------|
+------------------------------------------------------------
+                    MAIN FUNCTIONS:                       	
+                                                        	
+                    - SUBSTRING                             
+                    - LENGTH                                
+                    - TRIM                                  
+                    - REPLACE                               
+------------------------------------------------------------
 */
 
 
@@ -1157,11 +1157,11 @@ select replace (titulo,' ','_') from livros;
 
 
 /*
-------------------------------------------------------------|
-                    CONCATENATING STRINGS:                  |
-                                                        	|
-                    - CONCAT OR ||                          |
-------------------------------------------------------------|
+------------------------------------------------------------
+                    CONCATENATING STRINGS:                  
+                                                        	
+                    - CONCAT OR ||                          
+------------------------------------------------------------
 */
 
 
@@ -1178,15 +1178,15 @@ select 'Name: ' || nome || ' ' || 'Last Name: ' || sobrenome from socios;
 
 
 /*
-------------------------------------------------------------|
-                    NUMERIC FUNCTIONS:                      |
-                                                        	|
-                    - ABS                                   |
-                    - MOD                                   |
-                    - ROUND                                	|
-                    - TRUNC                                	|
-                    - RANDOM                               	|
-------------------------------------------------------------|
+------------------------------------------------------------
+                    NUMERIC FUNCTIONS:                      
+                                                        	
+                    - ABS                                   
+                    - MOD                                   
+                    - ROUND                                	
+                    - TRUNC                                	
+                    - RANDOM                               	
+------------------------------------------------------------
 */  
 
 
@@ -1227,13 +1227,13 @@ where codigo = trunc(random() * (10 - 1) + 1);
 
 
 /*
-------------------------------------------------------------|
-                    DATE/TIME FUNCTIONS:                    |
-                                                        	|
-                    - NOW() AND CURRENT_DATE                |
-                    - EXTRACT AND DATE_PART                 |
-                    - AGE                                   |
-------------------------------------------------------------|
+------------------------------------------------------------
+                    DATE/TIME FUNCTIONS:                   
+                                                        	
+                    - NOW() AND CURRENT_DATE                
+                    - EXTRACT AND DATE_PART                 
+                    - AGE                                   
+------------------------------------------------------------
 */
 
 
@@ -1284,14 +1284,14 @@ from locacoes;
 
 
 /*
-------------------------------------------------------------|
-                    HIDING SENSITIVE DATA:                  |
-                                                            |
-                    - MD5                                   |
-                    - CRYPT                                 |
-                    - GEN_SALT                              |
-                    - CRYPT + GEN_SALT                      |
-------------------------------------------------------------|
+------------------------------------------------------------
+                    HIDING SENSITIVE DATA:                  
+                                                            
+                    - MD5                                   
+                    - CRYPT                                 
+                    - GEN_SALT                              
+                    - CRYPT + GEN_SALT                      
+------------------------------------------------------------
 */
 
 
@@ -1316,7 +1316,7 @@ REQUIRES SPECIFYING THE ALGORITHM (BLOWFISH - BF) AND THE "SALT" SIZE*/
 select gen_salt('bf',8);
 
 
-/*CRYPT + GEN_SALT -----------------------------------------------------------
+/*CRYPT + GEN_SALT ----------------------------------------------------
 - RETURNS RANDOM 60-CHARACTER HASHES,
 more secure than MD5.
 RETURNS THE SAME 60-CHARACTER HASH WITH BLOWFISH (BF) ALGORITHM
@@ -1389,14 +1389,14 @@ order by ano, mes;
 
 
 /*
-------------------------------------------------------------|
-                    JOINING TABLES:                         |
-                                                            |
-                    - INNER JOIN                            |
-                    - RIGHT AND LEFT JOIN                   |
-                    - FULL JOIN                             |
-                    - UNION                                 |
-------------------------------------------------------------|
+------------------------------------------------------------
+                    JOINING TABLES:                         
+                                                            
+                    - INNER JOIN                            
+                    - RIGHT AND LEFT JOIN                   
+                    - FULL JOIN                             
+                    - UNION                                 
+------------------------------------------------------------
 */
 
 
@@ -1575,16 +1575,16 @@ select * from socios;
 
 
 /*
-------------------------------------------------------------|
-                    SUBQUERIES:                             |
-                                                            |
-                    - SUBQUERY AS FILTER                    |
-                    - SUBQUERY AS COLUMN                    |
-                    - SUBQUERY AS TABLE                     |
-                    - EXISTS / NOT EXISTS                   |
-                    - SUBQUERY IN AN UPDATE                 |
-                                                            |
-------------------------------------------------------------|
+------------------------------------------------------------
+                    SUBQUERIES:                             
+                                                            
+                    - SUBQUERY AS FILTER                    
+                    - SUBQUERY AS COLUMN                    
+                    - SUBQUERY AS TABLE                     
+                    - EXISTS / NOT EXISTS                   
+                    - SUBQUERY IN AN UPDATE                 
+                                                            
+------------------------------------------------------------
 */
 
 
@@ -1668,14 +1668,13 @@ WHERE data_publicacao = '2021-11-09';
 
 
 /*
-------------------------------------------------------------------------|
-																		|
-				CREATING TABLE COPIES FROM A QUERY						|
-																		|
-				- SELECT INTO											|
-				- CREATE TABLE											|
-																		|
-------------------------------------------------------------------------|
+------------------------------------------------------------------------
+																		
+				CREATING TABLE COPIES FROM A QUERY																								|
+				- SELECT INTO						
+				- CREATE TABLE										
+																		
+------------------------------------------------------------------------
 */
 
 
@@ -1713,17 +1712,17 @@ from socios;
 
 
 /*
-----------------------------------------------------------------|
-																|
-				ATTRIBUTES OF THE UNIQUE TYPE:					|	
-																|
-				- CREATE TABLE 									|
-				- ALTER TABLE									|
-				- USED IN TABLE / DB CREATION					|
-				- IT'S A UNIQUE VALUE, NOT REPEATED BY ROW		|
-				- IT'S A CONSTRAINT INFORMED FOR THE COLUMN		|
-																|
-----------------------------------------------------------------|
+----------------------------------------------------------------
+																
+		ATTRIBUTES OF THE UNIQUE TYPE:					
+																
+		- CREATE TABLE 									
+		- ALTER TABLE									
+		- USED IN TABLE / DB CREATION					
+		- IT'S A UNIQUE VALUE, NOT REPEATED BY ROW		
+		- IT'S A CONSTRAINT INFORMED FOR THE COLUMN		
+																
+----------------------------------------------------------------
 */
 
 
@@ -1749,22 +1748,22 @@ add constraint cpf_un unique(cpf);
 
 
 /*
-----------------------------------------------------------------|
-																|
-				TRANSACTIONS: 									|
-																|
-				SET OF 1 OR MORE OPERATIONS 					|
-				THAT MAKE UP A SINGLE TASK TO BE EXECUTED.		|
-																|
-				ALWAYS USE COMMIT or ROLLBACK before			|
-				using UPDATE OR DELETE							|
-				AS A BEST PRACTICE								|
-																|
-				- COMMIT 										|
-				- ROLLBACK										|
-																|
-																|
-----------------------------------------------------------------|
+----------------------------------------------------------------
+																
+		TRANSACTIONS: 									
+																
+		SET OF 1 OR MORE OPERATIONS 					
+		THAT MAKE UP A SINGLE TASK TO BE EXECUTED.		
+																
+		ALWAYS USE COMMIT or ROLLBACK before			
+		using UPDATE OR DELETE							
+		AS A BEST PRACTICE								
+																
+		- COMMIT 										
+		- ROLLBACK										
+																
+																
+----------------------------------------------------------------
 */
 
 --The COMMIT statement is used to permanently save the changes made during the current transaction. 
@@ -1786,23 +1785,23 @@ commit;
 
 
 /*
---------------------------------------------------------------------------------|
-																				|
-				VIEWS: 															|
-																				|
-				IT IS THE RESULT OF A PREDEFINED QUERY. 						|
-				WE CAN THINK OF A VIEW AS A VIRTUAL TABLE,						| 
-				SINCE IT REPRESENTS A DATA VIEW AND DOES NOT CONTAIN			|
-				DATA PHYSICALLY WITHIN IT, MEANING THE DATA IS NOT				|
-				PHYSICALLY STORED IN THE DATABASE.								|
-																				|
-																				|
-				- CREATE OR REPLACE VIEW										|
-				- CREATE OR REPLACE TEMPORARY VIEW								|
-				- CREATE MATERIALIZED VIEW / REFRESH MATERIALIZED VIEW			|
-				- DROP VIEW														|
-																				|
---------------------------------------------------------------------------------|
+--------------------------------------------------------------------------------
+																				
+		VIEWS: 															
+																				
+		IT IS THE RESULT OF A PREDEFINED QUERY. 						
+		WE CAN THINK OF A VIEW AS A VIRTUAL TABLE,						
+		SINCE IT REPRESENTS A DATA VIEW AND DOES NOT CONTAIN			
+		DATA PHYSICALLY WITHIN IT, MEANING THE DATA IS NOT				
+		PHYSICALLY STORED IN THE DATABASE.								
+																				
+																				
+		- CREATE OR REPLACE VIEW										
+		- CREATE OR REPLACE TEMPORARY VIEW								
+		- CREATE MATERIALIZED VIEW / REFRESH MATERIALIZED VIEW			
+		- DROP VIEW														
+																				
+--------------------------------------------------------------------------------
 */
 
 --VIEWS: It provides a dynamic, up-to-date representation of data from one or more underlying tables or other views.
@@ -1878,20 +1877,20 @@ drop view vw_emprestimos;
 
 
 /*
-------------------------------------------------------------------------------------|
-																					|
-				PROCEDURES: 														|
-																					|
-				A BLOCK OF SQL COMMANDS OR INSTRUCTIONS, ORGANIZED TO EXECUTE		|
-				ONE OR MORE TASKS. JUST LIKE A PROGRAMMING LANGUAGE,				|
-				WE CREATE A PROCEDURE TO PERFORM A MORE COMPLEX OR REPETITIVE TASK.	|
-																					|
-				- CREATE OR REPLACE PROCEDURE										|
-				- CALL																|
-				- DECLARE + RAISE NOTICE											|
-				- DELETE PROCEDURE (DROP)											|
-																					|
-------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------
+																					
+		PROCEDURES: 														
+																					
+		A BLOCK OF SQL COMMANDS OR INSTRUCTIONS, ORGANIZED TO EXECUTE		
+		ONE OR MORE TASKS. JUST LIKE A PROGRAMMING LANGUAGE,				
+		WE CREATE A PROCEDURE TO PERFORM A MORE COMPLEX OR REPETITIVE TASK.	
+																	
+		- CREATE OR REPLACE PROCEDURE										
+		- CALL																
+		- DECLARE + RAISE NOTICE											
+		- DELETE PROCEDURE (DROP)											
+																					
+------------------------------------------------------------------------------------
 */
 
  
@@ -1974,18 +1973,18 @@ drop procedure p_devolve_livro;
 
 
 /*
-----------------------------------------------------------------------------|
-																			|
-				FUNCTIONS: 													|
-																			|
-				RETURNS A VALUE, BOOLEAN, RECORD... BY DEFAULT.				|												
-				SIMILAR TO PROCEDURES, BUT FUNCTIONS RETURN SOMETHING		|
-				LIKE A VALUE, BOOLEAN, TEXT RECORD, ETC...					|
-																			|
-				- CREATE OR REPLACE FUNCTION								|	
-				- SELECT "FUNCTION"											|
-																			|
-----------------------------------------------------------------------------|
+----------------------------------------------------------------------------
+																			
+		FUNCTIONS: 													
+																			
+		RETURNS A VALUE, BOOLEAN, RECORD... BY DEFAULT.															
+		SIMILAR TO PROCEDURES, BUT FUNCTIONS RETURN SOMETHING		
+		LIKE A VALUE, BOOLEAN, TEXT RECORD, ETC...					
+													
+		- CREATE OR REPLACE FUNCTION									
+		- SELECT "FUNCTION"											
+														
+----------------------------------------------------------------------------
 */
 
 /*
@@ -2104,26 +2103,26 @@ SELECT f_search_book();
 
 
 /*
-----------------------------------------------------------------------------------------|
-																						|
-				TRIGGERS: 																|
-																						|
-				EVENT-DRIVEN ACTIONS TRIGGERED BY ACTIONS PERFORMED ON OUR TABLES.		|
-				(INSERT, UPDATE, DELETE)												|
-				TRIGGERS ARE CREATED FOR A SINGLE TABLE, NEVER FOR THE ENTIRE DATABASE;	|
-				EACH TABLE HAS ITS OWN TRIGGER.											|
-				IF A TABLE HAS MULTIPLE TRIGGERS, THEY ARE EXECUTED IN 					|
-				ALPHABETICAL ORDER.														|
-																						|
-				- CREATE TRIGGER														|
-				- BEFORE|AFTER															|
-				- INSERT|DELETE|TRUNCATE|UPDATE											|
-				- WHEN																	|
-				- FOR EACH ROW|STATEMENT												|
-				- EXECUTE FUNCTION|PROCEDURE											|
-				- "FUNCTION_NAME"														|
-																						|
-----------------------------------------------------------------------------------------|
+----------------------------------------------------------------------------------------
+																						
+		TRIGGERS: 																
+																						
+		EVENT-DRIVEN ACTIONS TRIGGERED BY ACTIONS PERFORMED ON OUR TABLES.		
+		(INSERT, UPDATE, DELETE)												
+		TRIGGERS ARE CREATED FOR A SINGLE TABLE, NEVER FOR THE ENTIRE DATABASE;	
+		EACH TABLE HAS ITS OWN TRIGGER.											
+		IF A TABLE HAS MULTIPLE TRIGGERS, THEY ARE EXECUTED IN 					
+		ALPHABETICAL ORDER.														
+																	
+		- CREATE TRIGGER														
+		- BEFORE|AFTER															
+		- INSERT|DELETE|TRUNCATE|UPDATE											
+		- WHEN																	
+		- FOR EACH ROW|STATEMENT												
+		- EXECUTE FUNCTION|PROCEDURE											
+		- "FUNCTION_NAME"														
+																						
+----------------------------------------------------------------------------------------
 */
 
 /*
@@ -2243,15 +2242,15 @@ SELECT * FROM AUDITORIA;
 
 
 /*
-------------------------------------------------------------------------------------------------|
-                                                                                				|
-                CTE: COMMON TABLE EXPRESSIONS                                  					|                                
-                                                                                				|
-                - AN ALTERNATIVE WAY TO WRITE QUERIES, MAKING THEM SIMPLER AND MORE READABLE. 	|
-                - CAN REPLACE SUBQUERIES, VIEWS, AND FUNCTIONS.                   				|
-                - ALLOWS YOU TO DIVIDE QUERIES INTO SIMPLE AND SEPARATE BLOCKS.   				|
-                                                                                				|
-------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------
+                                                                                				
+        CTE: COMMON TABLE EXPRESSIONS                                  					                              
+                                                                                				
+        - AN ALTERNATIVE WAY TO WRITE QUERIES, MAKING THEM SIMPLER AND MORE READABLE. 	
+        - CAN REPLACE SUBQUERIES, VIEWS, AND FUNCTIONS.                   				
+        - ALLOWS YOU TO DIVIDE QUERIES INTO SIMPLE AND SEPARATE BLOCKS.   				
+                                                                                				
+------------------------------------------------------------------------------------------------
 */
 
 --CTE: CTEs are particularly useful for improving the readability and maintainability of complex SQL queries by breaking them down into smaller, more manageable parts.
@@ -2282,19 +2281,19 @@ order by data_publicacao desc;
 --------------------------------------------------------------------------------------------------------------
 
 /*
-------------------------------------------------------------------------------------------------|
-                                                                                				|
-                CURSORS:                                                        				|                                
-                                                                                				|
-                - CREATED AND INSERTED WITHIN A FUNCTION                        				|
-                - REPRESENTS A TEMPORARILY STORED TABLE IN MEMORY               				|                               
-                - RESOURCE-INTENSIVE OPERATION FOR THE DATABASE, AS IT CAN USE A LOT OF MEMORY 	|
-                DEPENDING ON THE OPERATION TO BE PERFORMED.                     				|
-                                                                                				|
-                - FOR: LOOP TO IMPLEMENT THE CURSOR AUTOMATICALLY               				|
-                - FETCH: USED TO NAVIGATE THE CURSOR, WHEN USING THE DIRECTION   				|
-                                                                                				|
-------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------
+                                                                                				
+                CURSORS:                                                        				                               
+                                                                                			
+                - CREATED AND INSERTED WITHIN A FUNCTION                        				
+                - REPRESENTS A TEMPORARILY STORED TABLE IN MEMORY               				                               
+                - RESOURCE-INTENSIVE OPERATION FOR THE DATABASE, AS IT CAN USE A LOT OF MEMORY 	
+                DEPENDING ON THE OPERATION TO BE PERFORMED.                     				
+                                                                                				
+                - FOR: LOOP TO IMPLEMENT THE CURSOR AUTOMATICALLY               				
+                - FETCH: USED TO NAVIGATE THE CURSOR, WHEN USING THE DIRECTION   				
+                                                                                				
+------------------------------------------------------------------------------------------------
 */
 
 --CURSORS: Database object that allows you to retrieve and manipulate rows from a result set one at a time. 
@@ -2360,18 +2359,18 @@ commit;
 
 
 /*
---------------------------------------------------------------------------------------------------------|
-            INDEX:                                                            							|
-                                                                                						|
-            - USEFUL FOR IMPROVING DATABASE PERFORMANCE                        							|
-            - IMPROVES QUERY EXECUTION TIME                                     						|
-            - TYPES OF INDEX: B-TREE (DEFAULT), HASH, GIN, GIST                 						|
-            - FUNCTIONS LIKE AN INDEX IN A BOOK, MAKING IT EASIER TO LOCATE A SPECIFIC PART OF A COLUMN |
-                                                                                						|
-            - INDEXES SHOULD BE CREATED ON COLUMNS THAT ARE FREQUENTLY ACCESSED 						|
-                                                                                						|
-                                                                                						|
---------------------------------------------------------------------------------------------------------|
+--------------------------------------------------------------------------------------------------------
+            INDEX:                                                            							
+                                                                                						
+            - USEFUL FOR IMPROVING DATABASE PERFORMANCE                        							
+            - IMPROVES QUERY EXECUTION TIME                                     						
+            - TYPES OF INDEX: B-TREE (DEFAULT), HASH, GIN, GIST                 						
+            - FUNCTIONS LIKE AN INDEX IN A BOOK, MAKING IT EASIER TO LOCATE A SPECIFIC PART OF A COLUMN 
+                                                                                						
+            - INDEXES SHOULD BE CREATED ON COLUMNS THAT ARE FREQUENTLY ACCESSED 						
+                                                                                						
+                                                                                						
+--------------------------------------------------------------------------------------------------------
 */
 
 
@@ -2386,17 +2385,17 @@ create index livros_cod_editora_idx on livros(cod_editora);
 
 
 /*
---------------------------------------------------------------------------------|
-        PERMISSIONS AND USERS:                                                 	|
-                                                                                |
-        - WHEN CREATING A USER, PERMISSIONS CAN BE GRANTED IN DIFFERENT        	|
-        DATABASES AND TABLES.                                                  	|
-        - ENSURING DATA SECURITY AGAINST SQL INJECTION.                         |
-        - NEVER GRANT 'SUPERUSER' ACCESS TO OTHER USERS.                        |
-                                                                                |
-                                                                                |
-                                                                                |
---------------------------------------------------------------------------------|
+--------------------------------------------------------------------------------
+        PERMISSIONS AND USERS:                                                 	
+                                                                                
+        - WHEN CREATING A USER, PERMISSIONS CAN BE GRANTED IN DIFFERENT        	
+        DATABASES AND TABLES.                                                  	
+        - ENSURING DATA SECURITY AGAINST SQL INJECTION.                         
+        - NEVER GRANT 'SUPERUSER' ACCESS TO OTHER USERS.                        
+                                                                                
+                                                                                
+                                                                                
+--------------------------------------------------------------------------------
 */
 
 
@@ -2494,35 +2493,35 @@ VALUES
 
 
 /*
-------------------------------------------------------------------------------------------------|
-                                                                                              	|
-        BACKUP AND RESTORE                                                                    	|
-                                                                                              	|
-        - The method of performing a backup depends on the operating system and interface   	|
-        we are using. In the TEXT INTERFACE, we have the PG_DUMP command, which has a        	|
-        series of parameters for performing the backup.                                       	|
-                                                                                              	|
-        - In the GRAPHICAL INTERFACE, we right-click on the DATABASE and choose the "BACKUP" 	|
-        option. In the file type, choose PLAIN TEXT or TEXT depending on the settings of     	|
-        your interface. In the graphical interface, simply right-click on the database and   	|
-        choose the Restore option, specify the backup file generated earlier and the type   	|
-        that was generated.                                                                   	|
-                                                                                              	|
-        - PostgreSQL supports PLAIN TEXT and CUSTOMIZED BACKUP. In PLAIN TEXT, an SQL file    	|
-        is generated that can be viewed in any text editor, which is not the case with       	|
-        CUSTOMIZED BACKUP. When the backup is generated in a customized way, the restore     	|
-        must be done using the PG_RESTORE tool.                                                	|
-                                                                                              	|
-                                                                                              	|
-                                                                                              	|
-                                                                                              	|
-------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------
+                                                                                              	
+        BACKUP AND RESTORE                                                                    	
+                                                                                              	
+        - The method of performing a backup depends on the operating system and interface   	
+        we are using. In the TEXT INTERFACE, we have the PG_DUMP command, which has a        	
+        series of parameters for performing the backup.                                       	
+                                                                                              	
+        - In the GRAPHICAL INTERFACE, we right-click on the DATABASE and choose the "BACKUP" 	
+        option. In the file type, choose PLAIN TEXT or TEXT depending on the settings of     	
+        your interface. In the graphical interface, simply right-click on the database and   	
+        choose the Restore option, specify the backup file generated earlier and the type   	
+        that was generated.                                                                   	
+                                                                                              	
+        - PostgreSQL supports PLAIN TEXT and CUSTOMIZED BACKUP. In PLAIN TEXT, an SQL file    	
+        is generated that can be viewed in any text editor, which is not the case with       	
+        CUSTOMIZED BACKUP. When the backup is generated in a customized way, the restore     	
+        must be done using the PG_RESTORE tool.                                                	
+                                                                                              	
+                                                                                              	
+                                                                                              	
+                                                                                              	
+------------------------------------------------------------------------------------------------
 */
 
 
 
 
-								-- END OF THE LIBRARY PROJECT--
+				-- END OF THE LIBRARY PROJECT--
 								
 								
 
