@@ -1,5 +1,5 @@
 # PostgreSQL Library
-## Welcome to the PostgreSQL Library project! 
+Welcome to the PostgreSQL Library project! <br>
 
 ## Whether you're a beginner or an advanced user, this project offers a comprehensive guide to PostgreSQL, covering a wide range of topics and exercises to help you master the database system.
 
