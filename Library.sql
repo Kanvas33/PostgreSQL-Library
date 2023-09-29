@@ -1,5 +1,4 @@
-/* DB ***LIBRARY***
-ACADEMY DB */
+PostgreSQL Library
 
 -----------------------------------------------------------
 /* TABLE CONSTRUCTION WITHOUT FK						   
