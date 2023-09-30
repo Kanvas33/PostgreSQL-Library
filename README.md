@@ -6,7 +6,7 @@
 ### What you will find in this project:
 
 - TABLE CREATIONS
-- RELATIONSHIPS CREATION ( PostgreSQL and SQL Power Architect )
+- RELATIONSHIPS CREATION (PostgreSQL and SQL Power Architect)
 - DATA/RECORDS INSERTION INTO TABLE
 - OPERATORS
 - LOGICAL OPERATORS
