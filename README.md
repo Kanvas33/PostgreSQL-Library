@@ -2,8 +2,8 @@
 ## Check the code by clicking on the link below:
 - ['PostgreSQL Library' Project](https://github.com/Kanvas33/PostgreSQL-Library/blob/main/Library.sql)
 
-## Check out the Database Design by clicking on the link below:
-- ['Library Database Design' Entity-Relationship (ER) model using SQL Power Architect ](https://github.com/Kanvas33/PostgreSQL-Library/blob/main/Library_Database.Design.png)
+## Check out the Database Design screenshot below:
+!['Library Database Design' Entity-Relationship (ER) model using SQL Power Architect ](https://github.com/Kanvas33/PostgreSQL-Library/blob/main/Library_Database.Design.png)
 
 ## Whether you're a beginner or an advanced user, this project offers a comprehensive guide to PostgreSQL, covering a wide range of topics and exercises to help you master the database system.
 
