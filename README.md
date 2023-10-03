@@ -44,3 +44,6 @@
 - BACKUP AND RESTORE
 - GENERIC COMMANDS IN POSTGRESQL
 - EXERCISES  
+
+
+ ## For any questions or further information, please feel free to contact me here or at jeff.farias@gmail.com.
