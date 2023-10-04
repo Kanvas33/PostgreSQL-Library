@@ -4,9 +4,7 @@
 
 ## Check out the Database Design screenshot below:
 
-<img src="https://github.com/Kanvas33/PostgreSQL-Library/blob/main/Library_Database.Design.png" width="800" height="600">
-
-<!--!['Library Database Design' Entity-Relationship (ER) model using SQL Power Architect ](https://github.com/Kanvas33/PostgreSQL-Library/blob/main/Library_Database.Design.png)-->
+!['Library Database Design' Entity-Relationship (ER) model using SQL Power Architect ](https://github.com/Kanvas33/PostgreSQL-Library/blob/main/Library_Database.Design.png)
 
 Library Database Design. Entity-Relationship (ER) model using SQL Power Architect. 
 
