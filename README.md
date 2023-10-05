@@ -1,5 +1,5 @@
 <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/> </a> 
-<a href="https://sqlpowergroup.com/" target="_blank" rel="noreferrer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkryTpM6zKazUiNNfBqu-21eQEsdwCdcilbg&usqp=CAU" alt="sqlpowerarchitect" width="70" height="70"/> </a> 
+<a href="https://sqlpowergroup.com/" target="_blank" rel="noreferrer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkryTpM6zKazUiNNfBqu-21eQEsdwCdcilbg&usqp=CAU" alt="sqlpowerarchitect" width="60" height="60"/> </a> 
 
 # Welcome to my PostgreSQL Library project! <br>
 
