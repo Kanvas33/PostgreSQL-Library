@@ -1,3 +1,5 @@
+<a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> 
+
 # Welcome to my PostgreSQL Library project! <br>
 
 ## Check the code by clicking on the link below:
